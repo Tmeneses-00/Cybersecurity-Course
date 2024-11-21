@@ -25,18 +25,20 @@ case $option in
     ;;
 
     "3")
-    echo "nmap 192.168.1.252"
-    nmap 192.168.1.252
+    read -p "Enter the host IP address:" host
+    echo "Scanning ports on $host"
+    nmap -p "$host"
     ;;
 
     "4")
-    echo "netstat -rn"
+    echo "Here is your Routing Table:"
     netstat -rn
     ;;
 
     "5")
-    echo "traceroute 192.168.1.252"
-    traceroute 192.168.1.252
+    echo "Enter the host IP address:" 
+    read host
+    traceroute "$host"
     ;;
 
     "6")
